@@ -48,7 +48,7 @@ ENV CXX /usr/bin/clang++
 
 ENV OPENCV_VERSION=4.1.0
 
-RUN mkdir /opt && cd /opt && \
+RUN mkdir -p /opt && cd /opt && \
   wget https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip && \
   unzip ${OPENCV_VERSION}.zip && \
   rm -rf ${OPENCV_VERSION}.zip
